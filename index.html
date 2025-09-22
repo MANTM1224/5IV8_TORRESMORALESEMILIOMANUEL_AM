@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA DNI</title>
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validador de DNI</h1>
+        
+        <form id="dniForm">
+            <div class="dni-inputs">
+                <div class="input-group numero-dni">
+                    <label for="numeroDni">Número de DNI:</label>
+                    <input type="number" id="numeroDni" placeholder="12345678" min="0" max="99999999" required>
+                </div>
+                
+                <div class="input-group letra-dni">
+                    <label for="letraDni">Letra:</label>
+                    <input type="text" id="letraDni" placeholder="Z" maxlength="1" required>
+                </div>
+            </div>
+            
+            <button type="submit">Validar DNI</button>
+        </form>
+        
+        <div id="mensaje" class="mensaje"></div>
+        
+        <div class="info">
+            <h3>ℹInformación</h3>
+            <p>El DNI español consta de 8 dígitos seguidos de una letra. La letra se calcula dividiendo el número entre 23 y tomando el resto para seleccionar la letra correspondiente del alfabeto oficial.</p>
+        </div>
+    </div>
+
+    <script src="Script/Dniscript.js"></script>
+</body>
+</html>
